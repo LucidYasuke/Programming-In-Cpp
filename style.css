@@ -2,12 +2,9 @@
 
 body{
     font-family: 'Mulish', sans-serif;
+    background-color: #ecf2f4;
 }
 
-.schema a{
-    color: purple;
-}
-
-.schema a:hover{
-    color: red;
+.bg-primary-c{
+    background-color: #4c175a;
 }
