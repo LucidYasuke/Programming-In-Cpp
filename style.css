@@ -8,3 +8,15 @@ body{
 .bg-primary-c{
     background-color: #4c175a;
 }
+
+#menu a{
+    color: #863b87;
+}
+
+#menu a:hover{
+    color: #602a61;
+}
+
+#menu a:active{
+    color: #be5dc0;
+}
