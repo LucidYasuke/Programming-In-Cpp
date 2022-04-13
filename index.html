@@ -245,7 +245,24 @@
                     </section>
                     
                     <br>
-                    <p>If you typed in the code correctly, the program should print Hello World in the console/terminal. To give some information, the first line is a comment, and isnt</p>
+                    <p>If you typed in the code correctly, the program should print Hello World in the console/terminal. To give some information, the first line is a <a href="More/Comments.html">comment</a>, and is not seen as code when compiling. Include, includes libraries, iostream being built in. The next line is a namespace, when creating your own code, such as APIs, you'd want to give them all a specific name. The C++ built-in library is called the Standard "std" library. "cout" is a part of that library. If you didn't use namespace std, you'd have to use <code>std::cout</code> everytime you call cout.</p>
+
+                    <section class="language-cpp">
+                        <pre class="laguage-cpp">
+                            <code>
+                                #include &lt;iostream&gt;
+                                
+                                int main ()
+                                {
+                                    std::cout &lt;&lt; "Hi, My Name is John\n";
+                                    std::cout &lt;&lt; "I am 30 years old\n";
+                                    return 0;
+                                }
+                            </code>
+                        </pre>
+                    </section>
+
+                    <p>This is an example, where you see John, and the age number, change it to yours and execute the code.</p>
                 </div>
             </div>
         </div>
