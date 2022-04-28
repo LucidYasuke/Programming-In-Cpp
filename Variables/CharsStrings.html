@@ -216,6 +216,80 @@
                 </div>
                 <div class="col py-3">
                     <h3>Characters & Strings</h3>
+
+                    <div class="backForth">
+                        <a href="Numerics.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Booleans.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <div id="Characters">
+                        <h5>Char</h5>
+                        <p class="col-6">A char is a non-numeric primitive type of data. It holds one character, whether that be letter, number, or symbol. A char holds the data based off the <a href="asciitable.com">ASCII</a> Character Table. Lowercase characters have a higher value than uppercase, which will be seen later with comparison operators. When using the "+" symbol with chars, it will add their ASCII values together. 'A' has a value of 65 and 'a' has a value of 97. If we do 'A' + 'a' we will get 162.<br>You define a char using <code>''</code></p>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        char lower = 'a'
+                                        char upper = 'A'
+
+                                        std::cout &lt;&lt; lower &lt;&lt; std::endl; // Output : a
+                                        std::cout &lt;&lt; upper &lt;&lt; std::endl; // Output : A
+                                        std::cout &lt;&lt; lower &lt;&lt; " " &lt;&lt; upper &lt;&lt; std::endl; // Output : a A
+                                        // Note : A space counts as a char
+
+
+                                        std::cout &lt;&lt; static_cast&lt;int&gt;(lower) &lt;&lt; std::endl; // Output : 97
+                                        std::cout &lt;&lt; static_cast&lt;int&gt;(upper) &lt;&lt; std::endl; // Output : 65
+
+                                        std::cout &lt;&lt; lower + 3 &lt;&lt; std::endl; // Output : 100
+                                        std::cout &lt;&lt; upper + lower  &lt;&lt; std::endl; // Output : 162
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div id="Strings">
+                        <h5>Strings</h5>
+                        <p class="col-5">A string is a container of characters. Strings are mutable, their size can be changed, and orded, they are sorted based off index. The terms Mutable, Ordered, and Index will be covered in the next section. A string can be one word, a sentence, a whole paragraph, etc. A string is used so that you don't have to have multiple char variables for one word and print them speretely. Different apis may use their own form of strings, but in this tutorial we will be using C++ standard library string. With strings we can concatenate, meaning we add the strings together, not numerically. For that we use the plus symbol, which joins the two strings together. <br>You define a char using <code>""</code></p>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        std::string firstName = "Richard";
+                                        std::string lastName = "Harrison";
+
+                                        std::cout &lt;&lt; firstName &lt;&lt; std::endl; // Output : Richard
+                                        std::cout &lt;&lt; lastName &lt;&lt; std::endl; // Output : Harrison
+                                        std::cout &lt;&lt; firstName + Harrison &lt;&lt; std::endl; // Output : RichardHarrison
+                                        std::cout &lt;&lt; firstName &lt;&lt; " " &lt;&lt; Harrison &lt;&lt; std::endl; // Output : Richard Harrison
+                                        std::cout &lt;&lt; firstName + " " + Harrison &lt;&lt; std::endl; // Output : Richard Harrison
+
+                                        // Note : A space counts as a char
+
+                                        std::cout &lt;&lt; firstName[0] &lt;&lt; std::endl; // Output : R
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div class="backForth">
+                        <a href="Numerics.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Booleans.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>

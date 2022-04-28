@@ -9,6 +9,11 @@ body{
     background-color: #4c175a;
 }
 
+.btn-primary-c{
+    background-color: #4c175a;
+    color: #ecf2f4;
+}
+
 #menu a{
     color: #863b87;
 }

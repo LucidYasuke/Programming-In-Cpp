@@ -215,7 +215,228 @@
                     </div>
                 </div>
                 <div class="col py-3">
-                    <h3>Numerics</h3>
+                    <h3>Numerics</h3><br>
+
+                    <div class="backForth">
+                        <a href="../index.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="CharsStrings.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <h5>Variables</h5>
+                    <p class="col-6">Similar in mathematics, a variable is a named unit of data. For instance, the variable "people" can hold how much much there are in a room. "People" can equal 5, or it can equal 39. Ofcourse, "people" can't be equal too 9.4 as people can't be decimals. We will go over the 3 main numeric variable types <code>int</code></a>, <code>float</code>, and <code>double</code></p>
+                    
+                    <div id="integers">
+                        <h5>Integers</h5>
+                        <p class="col-6">An integer is a numeric data type, that does not contain a decimal. In other words, int stores whole numbers without decimals. Like earlier, you'd use an integer if you wanted to store things that should only be in non-decimal numbers: people, fingers, houses, and planets. Depending on the type of integer, it wil hold less data. For this lesson, we will use the default int declaration, but it is recommended to try others.</p>
+    
+                        <p class="col-6"> The most common way too declare a variable is <code>data_type variable_name;</code>.<br>To define (definition) a variable, <code>variable_name = number;</code>.<br>There is a faster way too do this, called initialization, <code>data_type variable_name = number;</code>.<br>Make it note, you can not define a variable without first declaring or initializing a variable.</p>
+    
+                        <p class="col-6">In the code below, we will be creating ints and printing them too the console.</p>
+    
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        int houses;
+                                        int people = 23;
+                                        
+                                        // "&lt;&lt; std::endl" is used too go too a new line
+                                        // Because houses wasn't defined, it's given a default value of zero
+                                        std::cout &lt;&lt; houses &lt;&lt; std::endl;
+                                        std::cout &lt;&lt; people &lt;&lt; std::endl;
+    
+                                        houses = 5;
+    
+                                        // Houses value is different
+                                        std::cout &lt;&lt; houses &lt;&lt; std::endl;
+    
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div id="floats">
+                        <h5>Floats</h5>
+                        <p class="col-6">Floats, floating point numbers, are fractional numbers that contains one or more decimal digit. Floats precision, the number of decimal digits, is 7. So a float can be 3.3748205. Floats are usually used for graphics libraries due too their lower precision than doubles. A float is 4 bytes of data.</p>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        // Declare a float
+                                        float width;
+
+                                        // Define a float
+                                        width = 10.45f;
+
+                                        // Initialize a float
+                                        float height = 720.f;
+                                        
+                                        // Print a float
+                                        std::cout &lt;&lt; width &lt;&lt; std::endl;
+                                        std::cout &lt;&lt; height &lt;&lt; std::endl;
+
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+
+                        <p class="col-6">From above, it can be seen that when you define or initializa a float, you need to put "f" at the end; this is too seperate it from a double. When floats print however, they will contain "f" at the end. Also if a float won't print 0's if it is at the end with no number after it. 7.f will print as "7", but 7.05f will print as "7.05". Floats allow for faster computation than doubles on older systems. </p>
+                    </div>
+                        
+                    <div id="doubles">
+                        <h5>Doubles</h5>
+                        <p class="col-6">Doubles are fractional numbers that contains one or more decimal digit, similar to floats. However, doubles precision is 15 decimal digits. Allowing for greater amount of storage, or "precision" as it's called. Doubles is 8 bytes. Brief explanation, 1 byte is equal too 8 bits. So 4 bytes equal too 32 bits, and the range of value in 32-bit can be 2<sup>32</sup>. 8 bytes is equal to 64 bits. So a float can take up a max of 2<sup>32</sup> bits while a double can take up 2<sup>64</sup> bits. Which is why it is called a double, being double a float. <br>We use the number 2, as bits can be either on or off, binary.</p>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        // Declare a double
+                                        double width;
+
+                                        // Define a double
+                                        width = 10.45;
+
+                                        // Initialize a double
+                                        double height = 720.0;
+                                        
+                                        // Print a double
+                                        std::cout &lt;&lt; width &lt;&lt; std::endl;
+                                        std::cout &lt;&lt; height &lt;&lt; std::endl;
+
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div id="info">
+                        <h5>Casting</h5>
+                        <p class="col-6">Now when declaring these 3 numeric variables, you may accidentally put "1" one with no decimal place for a double. The program will automatically "cast" the type into it's data type. So 1 will become 1.0, stored in the variable. But say you wanted too forceibly cast an data type too another. You'd use the method <code>static_cast&lt;type&gt;(value);</code>. It is best practice to explicitely tell your program to change a variable type if it needs to be changed.</p>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        double avgTimeD = 3.45454545;
+                                        float avgTimeF = avgTimeD;
+                                        int avgTimeI = avgTimeD;
+                                        
+                                        // On compilers that allow, shows all 8 decimal digits for avgTimeD
+                                        std::cout &lt;&lt; avgTimeD &lt;&lt; std::endl;
+                                        
+                                        // On compilers that allow, shows too 4 and drop the last 5, does not round
+                                        std::cout &lt;&lt; avgTimeF &lt;&lt; std::endl;
+
+                                        // Note : IDEs when compiling may choose too round and drop digits
+
+                                        // Will drop all decimal digits, it does not round
+                                        std::cout &lt;&lt; avgTimeI &lt;&lt; std::endl;
+
+                                        // Casting
+                                        int avgPeople = static_cast&lt;int&gt;(121 / 3.0);
+                                        std::cout &lt;&lt; "The average amount of people is " &lt;&lt; avgPeople &lt;&lt; std::endl;
+
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+
+                        <p class="col-6">When operating between 2 different numeric data types, such as adding an integer and double, the return value will have a type with the higher byte. Subtracting a float and double will return a double value. Multiplying an integer and float will return a double</p>
+
+                        <h5>Data Type Deviations</h5>
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Data Type</th>
+                                <th scope="col">Size (Bytes)</th>
+                                <th scope="col">Range</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">short int</th>
+                                <td>2</td>
+                                <td>-32,768 to 32,767</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">unsigned short int</th>
+                                <td>2</td>
+                                <td>0 to 65,535</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">unsigned int</th>
+                                <td>4</td>
+                                <td>0 to 4,294,967,295</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">int</th>
+                                <td>4</td>
+                                <td>-2,147,483,648 to 2,147,483,647</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">long int</th>
+                                <td>4</td>
+                                <td>-2,147,483,648 to 2,147,483,647</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">unsigned long int</th>
+                                <td>4</td>
+                                <td>0 to 4,294,967,295</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">long long int</th>
+                                <td>8</td>
+                                <td>-2<sup>63</sup> to 2<sup>63</sup> - 1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">unsigned long long int</th>
+                                <td>8</td>
+                                <td>0 to 2<sup>64</sup> - 1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">float</th>
+                                <td>4</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">double</th>
+                                <td>8</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">long double</th>
+                                <td>12</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+
+                    <div class="backForth">
+                        <a href="../index.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="CharsStrings.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
