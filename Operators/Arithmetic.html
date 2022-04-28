@@ -216,6 +216,113 @@
                 </div>
                 <div class="col py-3">
                     <h3>Arithmetic</h3>
+                    <div class="backForth">
+                        <a href="../Variables/Containers.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Assignment.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <div id="arithmetic">
+                        <h5>Arithmetic Operators</h5>
+                        <p class="col-6">Before we start, operators are symbols in a coding language that has a special tesk. An operator in the real world would be the plus symbol. When we see a plus symbol we know to add. Similarly, a plus symbol in code represents addition. Arithmetic operators are used to perform mathematical operations.</p>
+
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Operator</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Example</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">+</th>
+                                <td>Addition</td>
+                                <td>Adds together two values</td>
+                                <td>x + y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">-</th>
+                                <td>Subtraction</td>
+                                <td>Subtracts one value from another</td>
+                                <td>x - y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">*</th>
+                                <td>Multiplication</td>
+                                <td>Multiplies two values</td>
+                                <td>x * y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">/</th>
+                                <td>Division</td>
+                                <td>Divided one value by another</td>
+                                <td>x / y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">%</th>
+                                <td>Modulus</td>
+                                <td>Returns the division remainder</td>
+                                <td>x % y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">++</th>
+                                <td>Increment</td>
+                                <td>Increases the value by 1</td>
+                                <td>x++</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">--</th>
+                                <td>Decrement</td>
+                                <td>Decreases the value by 1</td>
+                                <td>--x</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <p class="col-6">
+                              With Increments and Decrements, you can do <code>++x</code> or <code>x++</code>, however, putting the operator before will cause a pre-increment while the other would be a post-increment. One is done at the begining of the code, while the other is done last.
+
+                              Modulus returns the remainder. So 10 / 3 will give you 3 while 10 % 3 will give you 1.
+                          </p>
+
+                          <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+
+                                        int num1 = 10;
+                                        int num2 = 3;
+
+                                        std::cout &lt;&lt; num1 + num2 &lt;&lt; std::endl; // Output: 13
+                                        std::cout &lt;&lt; num1 - num2 &lt;&lt; std::endl; // Output: 7
+                                        std::cout &lt;&lt; num1 * num2 &lt;&lt; std::endl; // Output: 30
+                                        std::cout &lt;&lt; num1 / num2 &lt;&lt; std::endl; // Output: 3
+                                        std::cout &lt;&lt; num1 % num2 &lt;&lt; std::endl; // Output: 1
+
+                                        // Example Of Pre-Increment
+                                        std::cout &lt;&lt; --num1 &lt;&lt; std::endl; // 9
+                                        std::cout &lt;&lt; num1 &lt;&lt; std::endl; // 9
+                                        
+                                        // Example Of Post-Increment
+                                        std::cout &lt;&lt; num2++ &lt;&lt; std::endl; // 3
+                                        std::cout &lt;&lt; num2 &lt;&lt; std::endl; // 4
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div class="backForth">
+                        <a href="../Variables/Containers.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Assignment.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
