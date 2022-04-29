@@ -216,6 +216,84 @@
                 </div>
                 <div class="col py-3">
                     <h3>Logical</h3>
+                    <div class="backForth col-5 col-md-10 col-xl-12">
+                        <a href="Relational.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="../Sequencing/Selection.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <div id="logical">
+                        <h5>Logical Operators</h5>
+                        <p class="col-6">Logical operators are used to determine the logic between variables or values</p>
+
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Operator</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Example</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">&&</th>
+                                <td>And</td>
+                                <td>Returns true if both statements are true</td>
+                                <td>x &gt; 5 && x &lt;= 10</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">||</th>
+                                <td>Or</td>
+                                <td>Returns true if one of the statements is true</td>
+                                <td>x &lt; 5 || x &gt;= 10</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">!</th>
+                                <td>Not</td>
+                                <td>Returns the reverse of the result</td>
+                                <td>!(x &lt; 5)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p class="col-6"><em>Research DeMorgans Law for a more indepth on the how too use the <code>!</code> symbol.</em></p>
+
+                          <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        // Will print 0 if false, 1 if true
+                                        int x = 7;
+                                        int y = 32;
+                                        int z = 99;
+
+                                        // Check if x is between 1 and 10, but not equal
+                                        // If x &gt; 1 is true and x &lt; 10 is true, then it is true
+                                        // true && true is true
+                                        std::cout &lt;&lt; (x &gt; 1 && x &lt; 10) &lt;&lt; std::endl; // Output: 1
+
+                                        // Check if y greater than or equal to 50 or divisible by 4
+                                        // If 4 divides into y with no remainder then y is a multiple of 4
+                                        // false or true is true
+                                        std::cout &lt;&lt; (y &gt;= 50 || y % 4 == 0) &lt;&lt; std::endl; // Output: 1
+
+                                        // If not z greater than y 
+                                        // Not true is false
+                                        std::cout &lt;&lt; (!(z &gt; y)) &lt;&lt; std::endl; // Output: 0
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+                    <div class="backForth col-5 col-md-10 col-xl-12">
+                        <a href="Relational.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="../Sequencing/Selection.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>

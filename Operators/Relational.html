@@ -216,6 +216,102 @@
                 </div>
                 <div class="col py-3">
                     <h3>Relational</h3>
+
+                    <div class="backForth col-5 col-md-10 col-xl-12">
+                        <a href="Assignment.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Logical.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <div id="ralational">
+                        <h5>Relational Operators</h5>
+                        <p class="col-6">Relational operators compare two values. Similar to math greater than symbol, C++ has this.</p>
+
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Operator</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Example</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">==</th>
+                                <td>Equal to</td>
+                                <td>Returns true if equal</td>
+                                <td>x == y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">!=</th>
+                                <td>Not equal</td>
+                                <td>Returns true if not equal</td>
+                                <td>x != y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&gt;</th>
+                                <td>Greater than</td>
+                                <td>Returns true if left is greater than right</td>
+                                <td>x &gt; y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&lt;</th>
+                                <td>Less than</td>
+                                <td>Returns true if left is less than right</td>
+                                <td>x &lt; y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&gt;=</th>
+                                <td>Greater than or Equal to</td>
+                                <td>Returns true if left is greater than or equal to right</td>
+                                <td>x &gt;= y</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">&lt;=</th>
+                                <td>Less than or Equal to</td>
+                                <td>Returns true if left is less than or equal to right</td>
+                                <td>x &lt;= y</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    int main ()
+                                    {
+                                        // Will print 0 if false, 1 if true
+                                        int x = 10;
+                                        int y = 5
+
+                                        std::cout &lt;&lt; (x == y) &lt;&lt; std::endl; // Output: 0
+
+                                        std::cout &lt;&lt; (x != y) &lt;&lt; std::endl; // Output: 1
+
+                                        // 10 is not greater than 10
+                                        std::cout &lt;&lt; (x &gt; x) &lt;&lt; std::endl; // Output: 0
+
+                                        std::cout &lt;&lt; (x &lt; y)  &lt;&lt; std::endl; // Output: 0
+
+                                        std::cout &lt;&lt; (x &gt;= y) &lt;&lt; std::endl; // Output: 1
+
+                                        std::cout &lt;&lt; (x &lt;= y) &lt;&lt; std::endl; // Output: 0
+                                        
+                                        return 0;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div class="backForth col-5 col-md-10 col-xl-12">
+                        <a href="Assignment.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="Logical.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
