@@ -140,74 +140,6 @@
                                             <span class="d-none d-sm-inline">Class & Objects</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="AccessAtributes.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Access & Atributes</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Constructors.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Constructors</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Methods.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Methods</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Inheritance.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Inheritance</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#submenu5" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi bi-grid"></i> 
-                                    <span class="ms-1 d-none d-sm-inline">More</span> 
-                                </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
-                                    <li class="w-100">
-                                        <a href="../More/HeadersCpp.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Headers & Cpp File</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../More/Templates.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Templates</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../More/ConstStatic.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Const & Static</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../More/Structures.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Structures</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../More/Enums.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Enums</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../More/Comments.html" class="nav-link px-0"> 
-                                            <i class="fs-4 bi bi-arrow-return-right"></i>
-                                            <span class="d-none d-sm-inline">Comments</span>
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -216,6 +148,140 @@
                 </div>
                 <div class="col py-3">
                     <h3>Classes & Objects</h3>
+                    
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="../References.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <br><br>
+                    </div>
+
+                    <p class="col-10">A class is a blueprint that can be edited to store values and perform methods (functions specific to that class). Say you wanted to create multiple people with different attributes. It would be a hassle to create numerous variables for each person. This is where classes come in, we create a person class which has predifined attributes and functions, and everytime we call this class, we create an object. The person is the class, the individual versions are the objects. <br><br>For this lesson, we will use header files along with cpp files. The importance of header files is to declare funtion, classes, and more. And have them be used in multiple different files without them constantly being rebuilt. With compilers, it will try and define multiple versions of the same function if they are included in multiple files.</p>
+
+                    <div class="syntax">
+                        <h6>Syntax</h6>
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    // Header File
+                                    class Foo
+                                    {
+                                        private:
+                                        protected:
+                                        public:
+                                            Foo();
+                                            virtual ~Foo();
+                                    };
+
+                                    // Cpp File
+                                    Foo::Foo()
+                                    {
+
+                                    }
+                                    Foo::~Foo()
+                                    {
+
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div class="header">
+                        <h6>Header</h6>
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include &lt;iostream&gt;
+                                    
+                                    class Human
+                                    {
+                                    private:
+                                        int age;
+                                        std::string firstName;
+                                        std::string lastName;
+                                    public:
+                                        Human(); // This is a default coonstructor
+                                        Human(std::string firstName, std::string lastName, int age);
+                                        virtual ~Human();
+
+                                        int getAge(); // This is a method
+                                        std::string getFirstName();
+                                        std::String getLastName();
+
+                                        void setAge(int age);
+                                        void setFirstName(std::string name);
+                                        void setLastName(std::string name);
+                                    };
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <div class="cpp">
+                        <h6>cpp</h6>
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    #include "Human.h"
+
+                                    Human::Human()
+                                    {
+                                        this->age = 25;
+                                        this->firstName = "John";
+                                        this->lastName = "Doe";
+                                    }
+
+                                    Human::Human(std::string firstName, std::string lastName, int age)
+                                    {
+                                        this->age = age;
+                                        this->firstName = firstName;
+                                        this->lastName = lastName;
+                                    }
+
+                                    Human::~Human()
+                                    {
+
+                                    }
+
+                                    int Human::getAge() // We use getters and setters if attributes are private
+                                    {
+                                        return this->age;
+                                    }
+
+                                    std::string Human::getFirstName()
+                                    {
+                                        return this->firstName;
+                                    }
+
+                                    std::string Human::getLastName()
+                                    {
+                                        return this->lastName;
+                                    }
+
+                                    void Human::setAge(int age)
+                                    {
+                                        this->age = age;
+                                    }
+
+                                    void Human::setFirstName(std::string name)
+                                    {
+                                        this->firstName = name;
+                                    }
+
+                                    void Human::setLastName(std::string name)
+                                    {
+                                        this->lastName = name;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                    </div>
+
+                    <p class="col-10">An attribute is a variable specific too the object. Your name for instance is an attribute.<br>A method is a function specific too the object.<br>Constructors are used to initiate an object. In other words, constructors are used to create an object.<br>Destructors are called once the object comes out of scope, is no longer called. It normally has nothing in it, but if pointers in your class are attributes, they should be deleted in the destructor in order to avoid memory leakage. However, if this pointer is shared by other objects in the program, it is best not too delete it if it is not the last object to hold it.<br>We use getters to get an attribute that is private or protected. These attributes are encapsulated and can't be accessed publicy by anything else in the program. Setters are used too change them.</p>
+
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="../References.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
