@@ -216,6 +216,94 @@
                 </div>
                 <div class="col py-3">
                     <h3>Functions</h3>
+
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="Iteration.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="../References.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+
+                    <p class="col-10">In programming we constantly repeat code. As we see, onc way we get by this is loops. With loops we can avoid repeating code. But what about the loop itself. What if we want to repeat that code in another file. We don't want to waste time rewriting that code. This is where functions come in. A  function can be created to run repeated code. You've been using functions, such as int main(), and vector.size() are examples of functions. One way to tell a function is that they have parenthesis.</p> 
+
+                    <div class="syntax">
+                        <h6>Syntax</h6>
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    void foo()
+                                    {
+                                        // Code block to be executed
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    data_type foo()
+                                    {
+                                        // Code block to be executed
+                                        return data_type;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+
+                        
+                        <section class="language-cpp">
+                            <pre class="laguage-cpp">
+                                <code>
+                                    data_type foo(data_type_one parameter_one, data_type_2, parameter_two, ......)
+                                    {
+                                        // Code block to be executed
+                                        return data_type;
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+
+                        <p class="col-10">Above we define a function called foo. If foo was inplemented in a program, it will do everything inside the code block. <code>void</code> is a place holder for a data type. With functions, a singular data of a data_type can be returned to the program. Void is a placeholder, telling the computer that nothing is being returned and everything is staying inside the function. If we wanted to return a data type, we'd have to set the return type at the top. We also have parameters, these are values they may be inputed into the function. Not every function will be empty, some need outside values in order too work. </p> 
+
+                        <div clas="example">
+                            <h6>Example</h6>
+                            <section class="language-cpp">
+                                <pre class="laguage-cpp">
+                                    <code>
+                                        #include &lt;iostream&gt;
+                                        
+                                        // Returns an exponent
+                                        int exp(int number, int exponent)
+                                        {
+                                            int num = 1;
+                                            for (int i = 0; i &lt; exponent; i++)
+                                            {
+                                                num *= number;
+                                            }
+                                            return num;
+                                        }
+
+                                        int main ()
+                                        {
+                                            exp(3, 9);
+                                            std::cout &lt;&lt; "3 to the 9th power is " &lt;&lt; exp(3, 9) &lt;&lt; std::endl;
+                                            exp(2, 2);
+                                            std::cout &lt;&lt; "2 to the 2nd power is " &lt;&lt; exp(2, 2) &lt;&lt; std::endl;
+                                            exp(10, 5);
+                                            std::cout &lt;&lt; "10 to the 5th power is " &lt;&lt; exp(10, 5) &lt;&lt; std::endl;
+                                            return 0;
+                                        }
+                                    </code>
+                                </pre>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="Iteration.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="../References.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>

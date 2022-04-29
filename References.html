@@ -216,6 +216,66 @@
                 </div>
                 <div class="col py-3">
                     <h3>References</h3>
+
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="Sequencing/Functions.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="OOP/ClassObjects.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
+                    
+                    <p class="col-10">A reference is the RAM (memory) Address where a variable is stored. References can instead of sending a copy of the value stored in a variable, telling a program where the variable is stored and to use it from here. In a later lesson, you will learn about encapsulation. With encapsulation, some variables may be private too the program, and can only be accesses from ourside using their reference. Or you may want too share a variable between different functions or scopes. But what if you wanted to store that reference somewhere. A variable holding the reference to another variable is called a pointer. <br><br> To reference a variable we use the "&" symbol, <code>&variable</code>.<br>To create a pointer we use the "*" symbol and must use it after the data_type, <code>data_type*;</code>.<br>To dereference, or get the value stored at a pointer, we use the "*" symbol <code>*pointer;</code></p>
+
+                    <section class="language-cpp">
+                        <pre class="laguage-cpp">
+                            <code>
+                                #include &lt;iostream&gt;
+
+                                int main ()
+                                {
+                                    int people = 7;
+                                    int* peoplePointer = &people;
+
+                                    std::cout &lt;&lt; "Number of people: " &lt;&lt; people &lt;&lt; std::endl;
+                                    std::cout &lt;&lt; "Value is stored at: " &lt;&lt; peoplePointer &lt;&lt; std::endl; 
+                                    return 0;
+                                }
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section class="language-cpp">
+                        <pre class="laguage-cpp">
+                            <code>
+                                #include &lt;iostream&gt;
+
+                                // The function changes the value giving too its exponent at the end
+                                void exp(int* num, int exponent)
+                                {
+                                  int value = 1;
+                                  for (int i = 0; i &lt; exponent; i++)
+                                  {
+                                    value *= *num;
+                                  }
+                                  *num = value;
+                                }
+                                
+                                int main ()
+                                {
+                                  int people = 7;
+                                  std::cout &lt;&lt; "The old value of people is " &lt;&lt; people &lt;&lt; std::endl;
+                                  exp(&people, 2);
+                                  std::cout &lt;&lt; "The new value of people is " &lt;&lt; people &lt;&lt; std::endl;
+                                  return 0;
+                                }
+                            </code>
+                        </pre>
+                    </section>
+
+                    <div class="backForth col-9 col-md-10 col-xl-12">
+                        <a href="Sequencing/Functions.html" class="btn btn-primary-c float-start" role="button">❮ Previous</a>
+                        <a href="OOP/ClassObjects.html" class="btn btn-primary-c float-end" role="button">Next ❯</a>
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
